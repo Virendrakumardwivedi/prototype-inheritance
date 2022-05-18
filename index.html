@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prototypal and Inheritance</h1>
+</body>
+</html>
+<script>
+
+
+const  automobiles_car ={
+    headlight: true,
+    weels : 4,
+    feul: true,
+    seets : 6,
+}
+
+const car1 = Object.create(automobiles_car, {name:{value:"Renult"}});
+console.log(car1);
+
+
+const car2 = Object.create(automobiles_car,{name:{value:"I10"}});
+car2.Sunroof="true"
+console.log(car2);
+
+const car3 = Object.create(automobiles_car,{name:{value:"Creata"}});
+console.log(car3);
+
+
+const car4 = Object.create(automobiles_car,{name:{value:"Safari"}});
+console.log(car4)
+
+
+//Constructor function 
+
+function Automobiles_car(color) {
+    this.color;
+    this.weels=4;
+    this.seets = 6;
+    this.gas = "false";
+}
+Automobiles_car.prototype.changeColor = function (color) {
+  this.color = color;
+};
+
+
+let car11 = new Automobiles_car("Brezza")
+car11.changeColor("red")
+console.log(car11)
+
+let car12 = new Automobiles_car("Tesla")
+car12.changeColor("Black")
+console.log(v=car12)
+
+
+
+</script>
